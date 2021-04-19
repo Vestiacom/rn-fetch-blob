@@ -475,7 +475,7 @@ export interface AndroidDownloadOption {
     /**
      * Boolean value that determines if notification will be displayed.
      */
-    showNotification: boolean 
+    showNotification: boolean
 }
 
 export interface AndroidApi {
@@ -488,7 +488,7 @@ export interface AndroidApi {
     actionViewIntent(path: string, mime: string): Promise<any>;
 
     /**
-     * 
+     *
      * This method brings up OS default file picker and resolves a file URI when the user selected a file.
      * However, it does not resolve or reject when user dismiss the file picker via pressing hardware back button,
      * but you can still handle this behavior via AppState.
@@ -627,6 +627,8 @@ export interface RNFetchBlobConfig {
      * Fix IOS request timeout issue #368 by change default request setting to defaultSessionConfiguration, and make backgroundSessionConfigurationWithIdentifier optional
      */
     IOSBackgroundTask?: boolean;
+
+    disableExpectHeader?: boolean;
 }
 
 export interface AddAndroidDownloads {

@@ -80,8 +80,9 @@ typedef NS_ENUM(NSUInteger, ResponseFormat) {
     self.expectedBytes = 0;
     self.receivedBytes = 0;
     self.options = options;
+    
 
-    backgroundTask = [[options valueForKey:@"IOSBackgroundTask"] boolValue];
+    backgroundTask = NO;
     // when followRedirect not set in options, defaults to TRUE
     followRedirect = [options valueForKey:@"followRedirect"] == nil ? YES : [[options valueForKey:@"followRedirect"] boolValue];
     isIncrement = [[options valueForKey:@"increment"] boolValue];
